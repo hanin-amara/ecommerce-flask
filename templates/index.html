@@ -1,0 +1,377 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='wassim.css') }}">
+    
+    
+    
+    <title>SmartFits Online Clothing Store</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<body>
+  <!-- section 111111111111  -->
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+            </div>
+            <div class="sing_in_up ">
+                <a href="# ">SIGN IN</a>
+                <a href="# ">SIGN UP</a>
+            </div>
+        </div>
+      </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+           <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sellers">Shop</a></li>
+                <li><a href="#news">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+        </div>
+      </nav>
+      <!-- section 2222222222222222222 -->
+    <section id="home">
+        <div class="home_page ">
+            <div class="home_img ">
+                <img src="https://i.postimg.cc/t403yfn9/home2.jpg" alt="img ">
+            </div>
+          <div class="home_txt ">
+                <p class="collectio ">SUMMER COLLECTION</p>
+  <h2>Your Style, Your Identity<br></h2>
+                <div class="home_label ">
+                    <p>A platform dedicated to offering premium quality fashion essentials <br>Thoughtfully designed, our clothing combines style and comfort<br> with a commitment to ethical standards.</p>
+                </div>
+          <button><a href="#sellers">SHOP NOW</a><i class='bx bx-right-arrow-alt'></i></button>
+                <div class="home_social_icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- section 33333333333333333333333333333333333333  -->
+    <section id="collection">
+        <div class="collections container">
+            <div class="content">
+                <img src="static\main2.png" alt="img" />
+                <div class="img-content">
+                    <p> Men Clothing Collections</p>
+                    <button><a href="#sellers">SHOP NOW</a></button>
+                </div>
+               </div>
+            <div class="content3">
+                <img src="static\main1.png" alt="img" />
+                <div class="img-content3">
+                    <p>Women Clothing Collections</p>
+                    <button><a href="#sellers2">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content3">
+              <img src="static\main1.png" alt="img" />
+              <div class="img-content3">
+                  <p>Children Clothing Collections</p>
+                  <button><a href="#sellers2">SHOP NOW</a></button>
+              </div>
+          </div>
+        </div>
+       </section>
+
+       <!-- Image Upload Section 4444444444444 -->
+ <!-- Image Upload Section -->
+ <section id="upload" class="upload-section">
+  <div class="container">
+    <h2>Upload Your Clothing Image</h2>
+    <p>Upload an image and click the button to detect fabric type and find similar clothing.</p>
+    <form id="imageForm" method="POST" enctype="multipart/form-data">
+      <input id="fileInput" type="file" name="file" accept="image/*" required>
+      <button id="uploadButton" type="button">Find Similar Clothing</button>
+    </form>
+  </div>
+</section>
+
+
+       <!-- section 44444444444444444444444444  -->
+<div id="defaultDiv" style="display: none;">
+        <section id="sellers">
+      <section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p>Summer Collection New Modern Design</p>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="static/512boAL7vuL._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Carton Astronault Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+        <h4>$78</h4>
+      </div>
+      <a href="/cart"><i class="fal fa-shopping-cart cart"></i></a>  <!-- Correct URL -->
+    </div>
+    <div class="pro">
+      <img src="static/71X9REpmp2L._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Carton Leave Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+        <h4>$78</h4>
+      </div>
+      <a href="/p2"><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="static/71PIAlvtt2L._SX569_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Rose Multicolor Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+        <h4>$78</h4>
+      </div>
+      <a href="/p3"><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="static/61Qxmb7-PaL._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Pink Flower Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+      
+        <h4>$78</h4>
+      </div>
+      <a href="/p4"><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    <div class="pro">
+      <img src="static/61aDArxxBlL._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Purple Flowering Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+      
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="static/71iKT8rnZnL._SY741_.jpg" alt="">
+      <div class="des">
+        <span>Jeans</span>
+        <h5>Baggy Jeans</h5>
+        <div class="rating">★★★★☆</div>
+      
+        <h4>$78</h4>
+      </div>
+      
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>   
+    <div class="pro">
+      <img src="static/61JWE7bm7FL._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>2 in 1 Double Routed</h5>
+        <div class="rating">★★★★☆</div>
+        
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="static/61i2UPvxI4L._SY741_.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Ash Short</h5>
+        <div class="rating">★★★★☆</div>
+    
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+  </div>
+  <!-- section 55555555555555555  -->
+        <section id="sellers2">
+      <section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p>Summer Collection New Modern Design</p>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="https://i.postimg.cc/kg9YYbTn/f1.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Carton Astronault Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+     
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/2yhT2kvb/f2.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Carton Leave Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+        
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/VL9DtNm2/f3.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Rose Multicolor Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+       
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/vZ3hPS1z/f4.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Pink Flower Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+      
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/q7FLrhx6/f5.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Purple Flowering Tshirts</h5>
+        <div class="rating">★★★★☆</div>
+      
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/L86BZByZ/f7.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Short Knicker </h5>
+        <div class="rating">★★★★☆</div>
+       
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/zDxJ2f0H/f6.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>2 in 1 Double Routed</h5>
+        <div class="rating">★★★★☆</div>
+       
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+    
+    
+    <div class="pro">
+      <img src="https://i.postimg.cc/x8qcBrpP/n6.jpg" alt="">
+      <div class="des">
+        <span>adidas</span>
+        <h5>Ash Short</h5>
+        <div class="rating">★★★★☆</div>
+       
+        <h4>$78</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div id="uploadedDiv" style="display: none;">
+  
+
+  <h1>Similar Images Found</h1>
+ <ul id="similarImagesList" style="display: flex; list-style-type: none; padding: 0; margin: 0; ">
+
+</div>
+
+<script>
+  const uploadButton = document.getElementById('uploadButton');
+  const fileInput = document.getElementById('fileInput');
+  const defaultDiv = document.getElementById('defaultDiv');
+  const uploadedDiv = document.getElementById('uploadedDiv');
+
+  uploadButton.addEventListener('click', function() {
+    const file = fileInput.files[0];  
+    if (!file) {
+      alert("Please select an image file first.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json()) 
+    .then(data => {
+      const similarImagesList = uploadedDiv.querySelector('ul');
+      similarImagesList.innerHTML = ''; 
+      // Populate the list with new images
+      if (data.similar_images && data.similar_images.length > 0) {
+          data.similar_images.forEach(image => {
+              const li = document.createElement('li');
+              li.innerHTML = `<img style="width:300px ; height:380px" src="static/${image}" alt="Similar Image">`;
+              similarImagesList.appendChild(li);
+          });
+          uploadedDiv.style.display = 'block'; // Show uploadedDiv
+          defaultDiv.style.display = 'none'; // Hide defaultDiv
+      } else {
+          const noImagesMsg = document.createElement('li');
+          noImagesMsg.textContent = "No similar images found.";
+          similarImagesList.appendChild(noImagesMsg);
+          uploadedDiv.style.display = 'block'; // Show uploadedDiv
+          defaultDiv.style.display = 'none'; // Hide defaultDiv
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  });
+
+  defaultDiv.style.display = 'block'; 
+</script>

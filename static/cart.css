@@ -1,0 +1,373 @@
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Zoom container for the product image */
+.zoom-container {
+    position: relative;
+    width: 300px;  /* Set width */
+    height: auto;  /* Automatic height based on content */
+    cursor: zoom-in;
+    overflow: hidden;
+    
+}
+
+/* Main product image */
+.zoom-container img {
+    width: 100%;  /* Full width */
+    transition: transform 0.3s ease;  /* Smooth transition for zoom effect */
+}
+/* Circle for fabric detail display */
+.fabric-circle {
+    position: absolute;
+    display: none; 
+    width: 150px;
+    height: 150px;         
+    justify-content: center;     
+    align-items: center;         
+    font-size: 14px;
+    z-index: 10;
+    pointer-events: none; 
+    border: 2px solid #000000; /* Border color and thickness */
+    border-radius: 50%; /* Makes the border circular */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+}
+
+/* Add this CSS rule to rotate the image */
+.fabric-circle img {
+    width: 100%;  /* Adjust as needed */
+    height: 100%; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+/* Adjust icon size */
+.fabric-icon {
+    width: 30%; /* Smaller icon */
+    height: auto; /* Maintain proportions */
+}
+
+/* Text in the circle */
+.fabric-circle::after {
+    
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+   
+}
+
+/* Zoom effect on click */
+.zoom-container.zoomed img {
+    transform: scale(2); /* Zoom 2x */
+}
+
+
+
+/* Product Image Section */
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Product Details */
+.product-details {
+    flex: 1;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.rating-reviews {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.rating {
+    color: #fbbf24;
+    font-size: 18px;
+}
+
+.reviews {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.search-link {
+    color: #2563eb;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 10px;
+}
+
+.tax-info {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+
+.details {
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Match this with your JavaScript timeout */
+}
+
+.details.show {
+    display: block; /* Show when needed */
+    opacity: 1; /* Fully visible */
+}
+
+.details.hide {
+    opacity: 0; /* Fade out */
+}
+
+
+/* Dropdown and Options */
+.size-selection select,
+.color-selection select {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.color-selection label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.color-selection .colors {
+    display: flex;
+    gap: 10px;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.color img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.color:hover,
+.color.active {
+    border-color: #2563eb;
+}
+
+/* Product Description */
+.details h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #45a049;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:  #ef4444;
+}
+
+/* Floating Cart Icon */
+.floating-cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.cart-icon {
+    position: relative;
+    margin-right: 15px;
+}
+
+.cart-icon i {
+    font-size: 24px;
+    color: #333;
+}
+
+.cart-quantity {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #FF4C4C;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cart-total {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+.cart-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Cart Table */
+.cart-container {
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-table th,
+#cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#cart-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#cart-table td img {
+    width: 50px;
+    height: auto;
+}
+
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.update-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.remove-btn {
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+.confirm-btn {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.confirm-btn:hover {
+    background-color: #165319;
+}
