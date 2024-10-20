@@ -38,7 +38,7 @@ scaler = StandardScaler()
 features_list_normalized = scaler.fit_transform(features_list)
 
 # Create KNN model
-n_neighbors = min(2, len(features_list))  # Adjust number of neighbors
+n_neighbors = min(4, len(features_list))  # Adjust number of neighbors
 knn = NearestNeighbors(n_neighbors=n_neighbors)
 knn.fit(features_list_normalized)
 
@@ -49,7 +49,7 @@ def find_similar_images(input_image_path):
     distances, indices = knn.kneighbors(input_features_normalized)
 
     similar_images = []
-    threshold_distance = 10000  # Adjust this value based on results
+    threshold_distance = 1000  # Adjust this value based on results
     for i, index in enumerate(indices[0]):
         distance = distances[0][i]
         if images[index] != os.path.basename(input_image_path) and distance < threshold_distance:
